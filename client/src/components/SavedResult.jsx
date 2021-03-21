@@ -10,23 +10,6 @@ const SavedResult = (props) => {
           <div>
             <div className="card  mb-2">
               <div className="card-body">
-                <div className="row">
-                  <button
-                    className=" btn btn-danger m-2"
-                    id={savedbook._id}
-                    onClick={() => props.handleDeleteButton(savedbook._id)}
-                  >
-                    Delete Book
-                  </button>
-                  <a href={savedbook.link} target="_blank" rel="noreferrer">
-                    {" "}
-                    <button className=" btn btn-success m-2">
-                      {" "}
-                      View Book
-                    </button>{" "}
-                  </a>
-                </div>
-
                 <div
                   className="row"
                   id={savedbook.title + "Card"}
@@ -40,6 +23,19 @@ const SavedResult = (props) => {
                     <h4 className="">{savedbook.authors}</h4>
                     <p className="pr-3">{savedbook.description}</p>
                   </div>
+                </div>
+                <div className="row">
+                  <button
+                    className=" btn btn-danger m-2"
+                    id={savedbook._id}
+                    onClick={() => props.handleDeleteButton(savedbook._id)}
+                  >
+                    DELETE{" "}
+                  </button>
+                  <a href={savedbook.link} target="_blank" rel="noreferrer">
+                    {" "}
+                    <button className=" btn btn-success m-2"> VIEW</button>{" "}
+                  </a>
                 </div>
               </div>
             </div>

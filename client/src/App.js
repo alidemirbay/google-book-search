@@ -1,21 +1,27 @@
 import React from "react";
-import MainNavbar from './components/MainNavbar';
-import Header from './components/Header';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import SearchForm from "./components/SearchForm";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import MainNavbar from "./components/MainNavbar";
+import Header from "./components/Header"
+import "./App.css"
+import { Container } from "react-bootstrap";
+import SearchPage from "./pages/SearchPage";
+import SavedPage from "./pages/SavedPage";
+
 
 function App() {
   return (
-
-    <div>
-
+    <Router>
 
       <MainNavbar />
-      <Header />
-      <SearchForm />
+      <Container>
+        <Header />
+        <Switch>
+          <Route exact path={['/', '/search']} component={SearchPage} />
+          <Route exact path="/saved" component={SavedPage} />
+        </Switch>
+      </Container>
 
-    </div>
-
+    </Router>
   );
 }
 

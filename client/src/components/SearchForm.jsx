@@ -22,7 +22,7 @@ const SearchForm = (props) => {
         className=" btn btn-primary mb-3"
         onClick={props.handleFormSubmit}
       >
-        Submit
+        SEARCH
       </button>
     </form>
   );

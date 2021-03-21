@@ -1,42 +1,40 @@
 import React from "react";
-import { Card, Row, Container } from "react-bootstrap";
-// import "./style.css";
 
 const SearchResult = (props) => {
   return (
-    <Container>
+    <div className="container">
       <h3>Search Results</h3>
       {props.books.map((book) => {
         return (
-          <div className="card mb-5">
+          <div className="card mb-3">
             <div className="card-body">
-              <Card id={book.title} key={book._id}>
-                <Card.Body size="2">
+              <div className=" row " key={book._id}>
+                <div className="col-2">
                   <img src={book.image} alt={book.title} />
-                </Card.Body>
-                <Card.Body size="10" className="pl-2">
-                  <h3 className="bookTitle">{book.title}</h3>
-                  <h4 className="bookAuthor">{book.authors}</h4>
-                  <p className="bookDescription pr-3">{book.description}</p>
-                </Card.Body>
-              </Card>
-              <Row>
+                </div>
+                <div className="col-10 pl-2">
+                  <h3 className="">{book.title}</h3>
+                  <h4 className="">{book.authors}</h4>
+                  <p className=" pr-3">{book.description}</p>
+                </div>
+              </div>
+              <div className="row">
                 <button
-                  className="save btn mt-4 ml-3 mr-1"
+                  className=" btn btn-success m-2"
                   id={book.id}
                   onClick={(event) => props.handleSavedButton(event)}
                 >
-                  Save Book
+                  SAVE
                 </button>
-                <a href={book.link} target="_blank" rel="noopener noreferrer">
-                  <button className="view btn mt-4">View Book</button>
+                <a href={book.link} target="_blank" rel="noreferrer">
+                  <button className="btn-primary btn m-2"> VIEW</button>
                 </a>
-              </Row>
+              </div>
             </div>
           </div>
         );
       })}
-    </Container>
+    </div>
   );
 };
 export default SearchResult;
