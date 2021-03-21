@@ -1,34 +1,31 @@
 import React from "react";
-import { Card, Form, Button } from "react-bootstrap";
 
-function SearchForm({}) {
+const SearchForm = (props) => {
   return (
-    <Card>
-      <Card.Body>
-        <Form>
-          <Form.Group>
-            <Form.Label>Book Name</Form.Label>
-            <Form.Control
-              type="text"
-              // value={props.search}
-              name="searchBook"
-              placeholder="Enter book name"
-              // onChange={props.handleInputChange}
-            />
-          </Form.Group>
-
-          <Button
-            variant="primary"
-            type="submit"
-            // onClick={props.handleFormSubmit}
-          >
-            {" "}
-            Search{" "}
-          </Button>
-        </Form>
-      </Card.Body>
-    </Card>
+    <form>
+      <div className="form-group">
+        <label className="BookSearchLabel">
+          <h3>Search For Books</h3>
+        </label>
+        <br></br>
+        <input
+          className="col-12 form-control"
+          value={props.search}
+          type="text"
+          name="searchBook"
+          placeholder="Search for a book by Title"
+          onChange={props.handleInputChange}
+        />
+      </div>
+      <button
+        type="submit"
+        className=" btn btn-primary mb-3"
+        onClick={props.handleFormSubmit}
+      >
+        Submit
+      </button>
+    </form>
   );
-}
+};
 
 export default SearchForm;
