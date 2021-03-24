@@ -42,7 +42,7 @@ const SearchPage = () => {
           setSearch("");
         }
       })
-      .catch(err => setError(err.items));
+      .catch(err => setError(error));
   }
 
 
