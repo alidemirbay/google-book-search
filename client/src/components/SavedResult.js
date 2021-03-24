@@ -1,5 +1,4 @@
 import React from "react";
-// import { Container, Row, Col } from "react-bootstrap";
 
 const SavedResult = (props) => {
   return (
@@ -16,7 +15,8 @@ const SavedResult = (props) => {
                   key={savedbook._id}
                 >
                   <div className="col-2">
-                    <img src={savedbook.image} alt={savedbook.title} />
+                    {" "}
+                    <img src={savedbook.image} alt={savedbook.title} />{" "}
                   </div>
                   <div className="col-10 pl-2">
                     <h3 className="">{savedbook.title}</h3>

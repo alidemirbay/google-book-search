@@ -2,24 +2,24 @@ import React from "react";
 
 const SearchForm = (props) => {
   return (
-    <form>
-      <div className="form-group">
-        <label className="BookSearchLabel">
+    <form className="border">
+      <div className="form-group ">
+        <label className="BookSearchLabel m-2">
           <h3>Search For Books</h3>
         </label>
-        <br></br>
+
         <input
-          className="col-12 form-control"
+          className="col-12 form-control "
           value={props.search}
           type="text"
           name="searchBook"
-          placeholder="Search for a book by Title"
+          placeholder="Type Something..."
           onChange={props.handleInputChange}
         />
       </div>
       <button
         type="submit"
-        className=" btn btn-primary mb-3"
+        className=" btn btn-primary m-2"
         onClick={props.handleFormSubmit}
       >
         SEARCH

@@ -2,10 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import MainNavbar from "./components/MainNavbar";
 import Header from "./components/Header"
-import "./App.css"
-import { Container } from "react-bootstrap";
 import SearchPage from "./pages/SearchPage";
 import SavedPage from "./pages/SavedPage";
+import NotFoundPage from "./pages/NotFoundPage";
 
 
 function App() {
@@ -13,13 +12,15 @@ function App() {
     <Router>
 
       <MainNavbar />
-      <Container>
+      <div className=' container py-4'>
         <Header />
         <Switch>
-          <Route exact path={['/', '/search']} component={SearchPage} />
+          <Route exact path="/" component={SearchPage} />
+          <Route exact path="/search" component={SearchPage} />
           <Route exact path="/saved" component={SavedPage} />
+          <Route component={NotFoundPage} />
         </Switch>
-      </Container>
+      </div>
 
     </Router>
   );
