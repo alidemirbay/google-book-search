@@ -4,7 +4,7 @@ function MainNavbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-primary ">
       <div className="container-fluid">
-        <a className="navbar-brand text-light" href="/search">
+        <a className="navbar-brand text-light" href="/">
           GOOGLE BOOKS
         </a>
         <button
